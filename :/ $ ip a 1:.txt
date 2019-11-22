@@ -1,0 +1,1186 @@
+
+:/ $ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: dummy0: <BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/ether aa:87:17:18:bf:00 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::a887:17ff:fe18:bf00/64 scope link
+       valid_lft forever preferred_lft forever
+3: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1
+    link/ipip 0.0.0.0 brd 0.0.0.0
+4: ip6_vti0@NONE: <NOARP> mtu 1500 qdisc noop state DOWN group default qlen 1
+    link/tunnel6 :: brd ::
+5: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1
+    link/sit 0.0.0.0 brd 0.0.0.0
+6: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 1
+    link/tunnel6 :: brd ::
+7: rmnet_ipa0: <UP,LOWER_UP> mtu 2000 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/[530]
+8: epdg0: <POINTOPOINT,MULTICAST,NOARP> mtu 1500 qdisc noop state DOWN group default qlen 500
+    link/none
+9: epdg1: <POINTOPOINT,MULTICAST,NOARP> mtu 1500 qdisc noop state DOWN group default qlen 500
+    link/none
+10: epdg2: <POINTOPOINT,MULTICAST,NOARP> mtu 1500 qdisc noop state DOWN group default qlen 500
+    link/none
+11: epdg3: <POINTOPOINT,MULTICAST,NOARP> mtu 1500 qdisc noop state DOWN group default qlen 500
+    link/none
+12: rmnet_data0: <> mtu 1422 qdisc noop state DOWN group default qlen 1000
+    link/[530]
+13: rmnet_data1: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/[530]
+14: rmnet_data2: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/[530]
+15: rmnet_data3: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/[530]
+16: rmnet_data4: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/[530]
+17: rmnet_data5: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/[530]
+18: rmnet_data6: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/[530]
+19: rmnet_data7: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/[530]
+20: r_rmnet_data0: <UP,LOWER_UP> mtu 1422 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/[530]
+    inet6 fe80::77dc:42c6:6af5:9e08/64 scope link
+       valid_lft forever preferred_lft forever
+21: r_rmnet_data1: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/[530]
+22: r_rmnet_data2: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/[530]
+23: r_rmnet_data3: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/[530]
+24: r_rmnet_data4: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/[530]
+25: r_rmnet_data5: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/[530]
+26: r_rmnet_data6: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/[530]
+27: r_rmnet_data7: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/[530]
+28: r_rmnet_data8: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/[530]
+31: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 98:b8:ba:08:3f:81 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.102/24 brd 192.168.1.255 scope global wlan0
+       valid_lft forever preferred_lft forever
+    inet6 2600:1700:cc60:a4c0:5d12:a9fc:ab5b:25a3/64 scope global temporary dynamic
+       valid_lft 3056sec preferred_lft 3056sec
+    inet6 2600:1700:cc60:a4c0:9ab8:baff:fe08:3f81/64 scope global dynamic mngtmpaddr
+       valid_lft 3056sec preferred_lft 3056sec
+    inet6 fe80::9ab8:baff:fe08:3f81/64 scope link
+       valid_lft forever preferred_lft forever
+32: p2p0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
+    link/ether 9a:b8:ba:08:3f:81 brd ff:ff:ff:ff:ff:ff
+:/ $ nmcli device status
+/system/bin/sh: nmcli: not found
+127|:/ $ ip -4 a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+31: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    inet 192.168.1.102/24 brd 192.168.1.255 scope global wlan0
+       valid_lft forever preferred_lft forever
+:/ $ ip link ls a
+request send failed: Permission denied
+1|:/ $ ip link ls up
+request send failed: Permission denied
+1|:/ $ ip a show eth0
+Device "eth0" does not exist.
+1|:/ $ ip a show dev
+Command line is not complete. Try option "help"
+255|:/ $ ip --help
+Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
+       ip [ -force ] -batch filename
+where  OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |
+                   tunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |
+                   netns | l2tp | fou | macsec | tcp_metrics | token | netconf | ila |
+                   vrf | sr }
+       OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
+                    -h[uman-readable] | -iec |
+                    -f[amily] { inet | inet6 | ipx | dnet | mpls | bridge | link } |
+                    -4 | -6 | -I | -D | -B | -0 |
+                    -l[oops] { maximum-addr-flush-attempts } | -br[ief] |
+                    -o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |
+                    -rc[vbuf] [size] | -n[etns] name | -a[ll] |-c[olor]}
+255|:/ $ ip n
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+fe80::c42:a6b6:4af8:54b0 dev wlan0 lladdr 3c:15:c2:57:87:3c STALE
+fe80::2025:6cc9:3c22:5f91 dev wlan0 lladdr a4:db:30:4e:66:6c STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::b549:1b2c:5e39:bdce dev wlan0 lladdr 2c:54:91:43:5f:e9 STALE
+:/ $ ip token
+token :: dev rmnet_ipa0
+token :: dev rmnet_data0
+token :: dev rmnet_data1
+token :: dev rmnet_data2
+token :: dev rmnet_data3
+token :: dev rmnet_data4
+token :: dev rmnet_data5
+token :: dev rmnet_data6
+token :: dev rmnet_data7
+token :: dev r_rmnet_data0
+token :: dev r_rmnet_data1
+token :: dev r_rmnet_data2
+token :: dev r_rmnet_data3
+token :: dev r_rmnet_data4
+token :: dev r_rmnet_data5
+token :: dev r_rmnet_data6
+token :: dev r_rmnet_data7
+token :: dev r_rmnet_data8
+token :: dev wlan0
+token :: dev p2p0
+:/ $ ip route
+192.168.1.0/24 dev wlan0 proto kernel scope link src 192.168.1.102 :/ $ ip tuntap
+opendir: Permission denied
+1|:/ $ ip location
+Object "location" is unknown, try "ip help".
+1|:/ $ ip help
+Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
+       ip [ -force ] -batch filename
+where  OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |
+                   tunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |
+                   netns | l2tp | fou | macsec | tcp_metrics | token | netconf | ila |
+                   vrf | sr }
+       OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
+                    -h[uman-readable] | -iec |
+                    -f[amily] { inet | inet6 | ipx | dnet | mpls | bridge | link } |
+                    -4 | -6 | -I | -D | -B | -0 |
+                    -l[oops] { maximum-addr-flush-attempts } | -br[ief] |
+                    -o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |
+                    -rc[vbuf] [size] | -n[etns] name | -a[ll] |-c[olor]}
+255|:/ $ ip 12tp
+Object "12tp" is unknown, try "ip help".
+1|:/ $ ip data8
+Object "data8" is unknown, try "ip help".
+1|:/ $ ip address data8
+Command "data8" is unknown, try "ip address help".
+255|:/ $ ip address rmnet
+Command "rmnet" is unknown, try "ip address help".
+255|:/ $ ip link
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: dummy0: <BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/ether aa:87:17:18:bf:00 brd ff:ff:ff:ff:ff:ff
+3: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN mode DEFAULT group default qlen 1
+    link/ipip 0.0.0.0 brd 0.0.0.0
+4: ip6_vti0@NONE: <NOARP> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1
+    link/tunnel6 :: brd ::
+5: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN mode DEFAULT group default qlen 1
+    link/sit 0.0.0.0 brd 0.0.0.0
+6: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN mode DEFAULT group default qlen 1
+    link/tunnel6 :: brd ::
+7: rmnet_ipa0: <UP,LOWER_UP> mtu 2000 qdisc pfifo_fast state UNKNOWN mode DEFAULT group default qlen 1000
+    link/[530]
+8: epdg0: <POINTOPOINT,MULTICAST,NOARP> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 500
+    link/none
+9: epdg1: <POINTOPOINT,MULTICAST,NOARP> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 500
+    link/none
+10: epdg2: <POINTOPOINT,MULTICAST,NOARP> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 500
+    link/none
+11: epdg3: <POINTOPOINT,MULTICAST,NOARP> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 500
+    link/none
+12: rmnet_data0: <> mtu 1422 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[530]
+13: rmnet_data1: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[530]
+14: rmnet_data2: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[530]
+15: rmnet_data3: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[530]
+16: rmnet_data4: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[530]
+17: rmnet_data5: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[530]
+18: rmnet_data6: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[530]
+19: rmnet_data7: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[530]
+20: r_rmnet_data0: <UP,LOWER_UP> mtu 1422 qdisc pfifo_fast state UNKNOWN mode DEFAULT group default qlen 1000
+    link/[530]
+21: r_rmnet_data1: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[530]
+22: r_rmnet_data2: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[530]
+23: r_rmnet_data3: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[530]
+24: r_rmnet_data4: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[530]
+25: r_rmnet_data5: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[530]
+26: r_rmnet_data6: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[530]
+27: r_rmnet_data7: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[530]
+28: r_rmnet_data8: <> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/[530]
+31: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DORMANT group default qlen 1000
+    link/ether 98:b8:ba:08:3f:81 brd ff:ff:ff:ff:ff:ff
+32: p2p0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN mode DORMANT group default qlen 1000
+    link/ether 9a:b8:ba:08:3f:81 brd ff:ff:ff:ff:ff:ff
+:/ $ ip help
+Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
+       ip [ -force ] -batch filename
+where  OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |
+                   tunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |
+                   netns | l2tp | fou | macsec | tcp_metrics | token | netconf | ila |
+                   vrf | sr }
+       OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
+                    -h[uman-readable] | -iec |
+                    -f[amily] { inet | inet6 | ipx | dnet | mpls | bridge | link } |
+                    -4 | -6 | -I | -D | -B | -0 |
+                    -l[oops] { maximum-addr-flush-attempts } | -br[ief] |
+                    -o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |
+                    -rc[vbuf] [size] | -n[etns] name | -a[ll] |-c[olor]}
+255|:/ $ ip mroute
+Not a multicast route (type: unicast)
+Not a multicast route (type: unicast)
+Not a multicast route (type: unicast)
+Not a multicast route (type: unicast)
+Not a multicast route (type: unicast)
+Not a multicast route (type: broadcast)
+Not a multicast route (type: local)
+Not a multicast route (type: local)
+Not a multicast route (type: broadcast)
+Not a multicast route (type: broadcast)
+Not a multicast route (type: local)
+Not a multicast route (type: broadcast)
+Not a multicast route (type: unicast)
+Not a multicast route (type: unicast)
+Not a multicast route (type: unicast)
+Not a multicast route (type: unicast)
+Not a multicast route (type: unicast)
+Not a multicast route (type: unicast)
+Not a multicast route (type: unreachable)
+Not a multicast route (type: unreachable)
+Not a multicast route (type: unreachable)
+Not a multicast route (type: unreachable)
+Not a multicast route (type: unicast)
+Not a multicast route (type: unicast)
+Not a multicast route (type: unreachable)
+Not a multicast route (type: unreachable)
+Not a multicast route (type: unicast)
+Not a multicast route (type: unicast)
+Not a multicast route (type: unreachable)
+Not a multicast route (type: unreachable)
+Not a multicast route (type: local)
+Not a multicast route (type: local)
+Not a multicast route (type: local)
+Not a multicast route (type: local)
+Not a multicast route (type: local)
+Not a multicast route (type: local)
+Not a multicast route (type: local)
+Not a multicast route (type: local)
+Not a multicast route (type: local)
+Not a multicast route (type: local)
+Not a multicast route (type: unicast)
+Not a multicast route (type: unicast)
+Not a multicast route (type: unicast)
+Not a multicast route (type: unreachable)
+:/ $ ip ntable
+inet arp_cache
+    thresh1 128 thresh2 512 thresh3 1024 gc_int 30000
+    refcnt 1 reachable 8080 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev p2p0
+    refcnt 1 reachable 11470 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev wlan0
+    refcnt 4 reachable 20620 base_reachable 15000 retrans 300
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 20 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev r_rmnet_data8
+    refcnt 1 reachable 10760 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev r_rmnet_data7
+    refcnt 1 reachable 12540 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev r_rmnet_data6
+    refcnt 1 reachable 12410 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev r_rmnet_data5
+    refcnt 1 reachable 16680 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev r_rmnet_data4
+    refcnt 1 reachable 15320 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev r_rmnet_data3
+    refcnt 1 reachable 7650 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev r_rmnet_data2
+    refcnt 1 reachable 11100 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev r_rmnet_data1
+    refcnt 1 reachable 17480 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev r_rmnet_data0
+    refcnt 1 reachable 8720 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev rmnet_data7
+    refcnt 1 reachable 12660 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev rmnet_data6
+    refcnt 1 reachable 21020 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev rmnet_data5
+    refcnt 1 reachable 11680 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev rmnet_data4
+    refcnt 1 reachable 22420 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev rmnet_data3
+    refcnt 1 reachable 10390 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev rmnet_data2
+    refcnt 1 reachable 22350 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev rmnet_data1
+    refcnt 1 reachable 9320 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev rmnet_data0
+    refcnt 1 reachable 10200 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev epdg3
+    refcnt 1 reachable 19810 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev epdg2
+    refcnt 1 reachable 17010 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev epdg1
+    refcnt 1 reachable 18820 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev epdg0
+    refcnt 1 reachable 16210 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev rmnet_ipa0
+    refcnt 1 reachable 19170 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev ip6tnl0
+    refcnt 1 reachable 11680 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev sit0
+    refcnt 1 reachable 16680 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev ip6_vti0
+    refcnt 1 reachable 10990 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev ip_vti0
+    refcnt 1 reachable 13950 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev dummy0
+    refcnt 1 reachable 14650 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet arp_cache
+    dev lo
+    refcnt 2 reachable 15810 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+inet6 ndisc_cache
+    thresh1 128 thresh2 512 thresh3 1024 gc_int 30000
+    refcnt 1 reachable 15240 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev p2p0
+    refcnt 2 reachable 18700 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev wlan0
+    refcnt 11 reachable 21240 base_reachable 15000 retrans 300
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 20 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev r_rmnet_data8
+    refcnt 1 reachable 10600 base_reachable 15000 retrans 50
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev r_rmnet_data7
+    refcnt 1 reachable 7610 base_reachable 15000 retrans 50
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev r_rmnet_data6
+    refcnt 1 reachable 19920 base_reachable 15000 retrans 50
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev r_rmnet_data5
+    refcnt 1 reachable 16660 base_reachable 15000 retrans 50
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev r_rmnet_data4
+    refcnt 1 reachable 19790 base_reachable 15000 retrans 50
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev r_rmnet_data3
+    refcnt 1 reachable 16170 base_reachable 15000 retrans 50
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev r_rmnet_data2
+    refcnt 1 reachable 22400 base_reachable 15000 retrans 50
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev r_rmnet_data1
+    refcnt 1 reachable 19620 base_reachable 15000 retrans 50
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev r_rmnet_data0
+    refcnt 3 reachable 18160 base_reachable 15000 retrans 50
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev rmnet_data7
+    refcnt 1 reachable 13290 base_reachable 15000 retrans 50
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev rmnet_data6
+    refcnt 1 reachable 8940 base_reachable 15000 retrans 50
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev rmnet_data5
+    refcnt 1 reachable 20580 base_reachable 15000 retrans 50
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev rmnet_data4
+    refcnt 1 reachable 8630 base_reachable 15000 retrans 50
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev rmnet_data3
+    refcnt 1 reachable 13410 base_reachable 15000 retrans 50
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev rmnet_data2
+    refcnt 1 reachable 17130 base_reachable 15000 retrans 50
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev rmnet_data1
+    refcnt 1 reachable 11460 base_reachable 15000 retrans 50
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev rmnet_data0
+    refcnt 1 reachable 10470 base_reachable 15000 retrans 50
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev epdg3
+    refcnt 2 reachable 11240 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev epdg2
+    refcnt 2 reachable 18610 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev epdg1
+    refcnt 2 reachable 16600 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev epdg0
+    refcnt 2 reachable 13510 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev rmnet_ipa0
+    refcnt 1 reachable 18380 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev ip6tnl0
+    refcnt 1 reachable 9080 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev sit0
+    refcnt 1 reachable 12860 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev ip6_vti0
+    refcnt 1 reachable 7800 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev ip_vti0
+    refcnt 1 reachable 10860 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev dummy0
+    refcnt 4 reachable 20240 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+inet6 ndisc_cache
+    dev lo
+    refcnt 1 reachable 14490 base_reachable 15000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 30
+    app_probes 0 ucast_probes 3 mcast_probes 3
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 0
+
+:/ $ ip a del 00:00:00:00:00:00
+Error: any valid prefix is expected rather than "00:00:00:00:00:00".
+1|:/ $ ip rule
+0:      from all lookup local
+10000:  from all fwmark 0xc0000/0xd0000 lookup 99
+10500:  from all iif lo oif dummy0 uidrange 0-0 lookup 1002
+10500:  from all iif lo oif wlan0 uidrange 0-0 lookup 1031
+10500:  from all iif lo oif r_rmnet_data0 uidrange 0-0 lookup 1020 13000:  from all fwmark 0x10063/0x1ffff iif lo lookup 97
+13000:  from all fwmark 0x1006b/0x1ffff iif lo lookup 1031
+13000:  from all fwmark 0xd0002/0xdffff iif lo lookup 1020
+14000:  from all iif lo oif dummy0 lookup 1002
+14000:  from all iif lo oif wlan0 lookup 1031
+14000:  from all fwmark 0xc0000/0xc0000 iif lo oif r_rmnet_data0 lookup 1020
+15000:  from all fwmark 0x0/0x10000 lookup 99
+16000:  from all fwmark 0x0/0x10000 lookup 98
+17000:  from all fwmark 0x0/0x10000 lookup 97
+18000:  from all iif r_rmnet_data0 lookup 1031
+18000:  from all iif r_rmnet_data0 lookup 1002
+19000:  from all fwmark 0x6b/0x1ffff iif lo lookup 1031
+22000:  from all fwmark 0x0/0xffff iif lo lookup 1031
+32000:  from all unreachable
+:/ $ ip help
+Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
+       ip [ -force ] -batch filename
+where  OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |
+                   tunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |
+                   netns | l2tp | fou | macsec | tcp_metrics | token | netconf | ila |
+                   vrf | sr }
+       OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
+                    -h[uman-readable] | -iec |
+                    -f[amily] { inet | inet6 | ipx | dnet | mpls | bridge | link } |
+                    -4 | -6 | -I | -D | -B | -0 |
+                    -l[oops] { maximum-addr-flush-attempts } | -br[ief] |
+                    -o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |
+                    -rc[vbuf] [size] | -n[etns] name | -a[ll] |-c[olor]}
+255|:/ $ ip tcp_metrics
+Cannot open netlink socket: Permission denied
+Cannot open generic netlink socket
+1|:/ $ who tcp
+/system/bin/sh: who: not found
+127|:/ $ /system/bin/sh tcp
+/system/bin/sh: tcp: No such file or directory
+127|:/ $ ip ief -t
+Object "ief" is unknown, try "ip help".
+1|:/ $ ip -t
+Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
+       ip [ -force ] -batch filename
+where  OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |
+                   tunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |
+                   netns | l2tp | fou | macsec | tcp_metrics | token | netconf | ila |
+                   vrf | sr }
+       OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
+                    -h[uman-readable] | -iec |
+                    -f[amily] { inet | inet6 | ipx | dnet | mpls | bridge | link } |
+                    -4 | -6 | -I | -D | -B | -0 |
+                    -l[oops] { maximum-addr-flush-attempts } | -br[ief] |
+                    -o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |
+                    -rc[vbuf] [size] | -n[etns] name | -a[ll] |-c[olor]}
+255|:/ $ ip xform
+Object "xform" is unknown, try "ip help".
+1|:/ $ ip maddress
+1:      lo
+        inet  224.0.0.1
+        inet6 ff02::1
+        inet6 ff01::1
+2:      dummy0
+        link  33:33:00:00:00:01
+        link  01:00:5e:00:00:01
+        inet  224.0.0.1
+        inet6 ff02::1
+        inet6 ff01::1
+3:      ip_vti0
+        inet6 ff02::1
+        inet6 ff01::1
+4:      ip6_vti0
+        inet6 ff02::1
+        inet6 ff01::1
+5:      sit0
+        inet6 ff02::1
+        inet6 ff01::1
+6:      ip6tnl0
+        inet6 ff02::1
+        inet6 ff01::1
+7:      rmnet_ipa0
+        inet  224.0.0.1
+        inet6 ff02::1
+        inet6 ff01::1
+8:      epdg0
+        inet6 ff05::2
+        inet6 ff01::2
+        inet6 ff02::2
+        inet6 ff02::1
+        inet6 ff01::1
+9:      epdg1
+        inet6 ff05::2
+        inet6 ff01::2
+        inet6 ff02::2
+        inet6 ff02::1
+        inet6 ff01::1
+10:     epdg2
+        inet6 ff05::2
+        inet6 ff01::2
+        inet6 ff02::2
+        inet6 ff02::1
+        inet6 ff01::1
+11:     epdg3
+        inet6 ff05::2
+        inet6 ff01::2
+        inet6 ff02::2
+        inet6 ff02::1
+        inet6 ff01::1
+12:     rmnet_data0
+        inet6 ff02::1
+        inet6 ff01::1
+13:     rmnet_data1
+        inet6 ff02::1
+        inet6 ff01::1
+14:     rmnet_data2
+        inet6 ff02::1
+        inet6 ff01::1
+15:     rmnet_data3
+        inet6 ff02::1
+        inet6 ff01::1
+16:     rmnet_data4
+        inet6 ff02::1
+        inet6 ff01::1
+17:     rmnet_data5
+        inet6 ff02::1
+        inet6 ff01::1
+18:     rmnet_data6
+        inet6 ff02::1
+        inet6 ff01::1
+19:     rmnet_data7
+        inet6 ff02::1
+        inet6 ff01::1
+20:     r_rmnet_data0
+        inet  224.0.0.1
+        inet6 ff02::1:ff00:0
+        inet6 ff02::1:fff5:9e08
+        inet6 ff02::1
+        inet6 ff01::1
+21:     r_rmnet_data1
+        inet6 ff02::1
+        inet6 ff01::1
+22:     r_rmnet_data2
+        inet6 ff02::1
+        inet6 ff01::1
+23:     r_rmnet_data3
+        inet6 ff02::1
+        inet6 ff01::1
+24:     r_rmnet_data4
+        inet6 ff02::1
+        inet6 ff01::1
+25:     r_rmnet_data5
+        inet6 ff02::1
+        inet6 ff01::1
+26:     r_rmnet_data6
+        inet6 ff02::1
+        inet6 ff01::1
+27:     r_rmnet_data7
+        inet6 ff02::1
+        inet6 ff01::1
+28:     r_rmnet_data8
+        inet6 ff02::1
+        inet6 ff01::1
+31:     wlan0
+        link  01:00:5e:00:00:01
+        link  33:33:00:00:00:01
+        link  33:33:ff:08:3f:81
+        link  33:33:ff:5b:25:a3
+        link  33:33:00:00:00:02 users 2
+        link  33:33:ff:00:00:00
+        inet  224.0.0.1
+        inet6 ff02::1:ff00:0 users 2
+        inet6 ff05::2
+        inet6 ff01::2
+        inet6 ff02::2
+        inet6 ff02::1:ff5b:25a3
+        inet6 ff02::1:ff08:3f81 users 2
+        inet6 ff02::1
+        inet6 ff01::1
+32:     p2p0
+        link  33:33:00:00:00:01
+        link  01:00:5e:00:00:01
+        link  33:33:00:00:00:02 users 2
+        inet  224.0.0.1
+        inet6 ff05::2
+        inet6 ff01::2
+        inet6 ff02::2
+        inet6 ff02::1
+        inet6 ff01::1
+:/ $ who lo
+/system/bin/sh: who: not found
+127|:/ $ /system/bin/sh NAME lo
+/system/bin/sh: NAME: No such file or directory
+127|:/ $ ip ppp
+Object "ppp" is unknown, try "ip help".
+1|:/ $ ip help
+Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
+       ip [ -force ] -batch filename
+where  OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |
+                   tunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |
+                   netns | l2tp | fou | macsec | tcp_metrics | token | netconf | ila |
+                   vrf | sr }
+       OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
+                    -h[uman-readable] | -iec |
+                    -f[amily] { inet | inet6 | ipx | dnet | mpls | bridge | link } |
+                    -4 | -6 | -I | -D | -B | -0 |
+                    -l[oops] { maximum-addr-flush-attempts } | -br[ief] |
+                    -o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |
+                    -rc[vbuf] [size] | -n[etns] name | -a[ll] |-c[olor]}
+255|:/ $ ip fou
+Usage: ip fou add port PORT { ipproto PROTO  | gue } [ -6 ]
+       ip fou del port PORT [ -6 ]
+
+Where: PROTO { ipproto-name | 1..255 }
+       PORT { 1..65535 }
+255|:/ $ PROTO help
+/system/bin/sh: PROTO: not found
+127|:/ $ ipproto-name | 1..255
+/system/bin/sh: ipproto-name: not found
+/system/bin/sh: 1..255: not found
+127|:/ $ ip monitor
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+
+31: wlan0    inet6 2600:1700:cc60:a4c0:9ab8:baff:fe08:3f81/64 scope global dynamic mngtmpaddr
+       valid_lft 3600sec preferred_lft 3600sec
+31: wlan0    inet6 2600:1700:cc60:a4c0:5d12:a9fc:ab5b:25a3/64 scope global temporary dynamic
+       valid_lft 3600sec preferred_lft 3600sec
+prefix 2600:1700:cc60:a4c0::/64dev wlan0 onlink autoconf valid 3600 preferred 3600
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+31: wlan0    inet6 2600:1700:cc60:a4c0:9ab8:baff:fe08:3f81/64 scope global dynamic mngtmpaddr
+       valid_lft 3600sec preferred_lft 3600sec
+31: wlan0    inet6 2600:1700:cc60:a4c0:5d12:a9fc:ab5b:25a3/64 scope global temporary dynamic
+       valid_lft 3600sec preferred_lft 3600sec
+prefix 2600:1700:cc60:a4c0::/64dev wlan0 onlink autoconf valid 3600 preferred 3600
+31: wlan0    inet6 2600:1700:cc60:a4c0:9ab8:baff:fe08:3f81/64 scope global dynamic mngtmpaddr
+       valid_lft 3600sec preferred_lft 3600sec
+31: wlan0    inet6 2600:1700:cc60:a4c0:5d12:a9fc:ab5b:25a3/64 scope global temporary dynamic
+       valid_lft 3600sec preferred_lft 3600sec
+prefix 2600:1700:cc60:a4c0::/64dev wlan0 onlink autoconf valid 3600 preferred 3600
+31: wlan0    inet6 2600:1700:cc60:a4c0:9ab8:baff:fe08:3f81/64 scope global dynamic mngtmpaddr
+       valid_lft 3600sec preferred_lft 3600sec
+31: wlan0    inet6 2600:1700:cc60:a4c0:5d12:a9fc:ab5b:25a3/64 scope global temporary dynamic
+       valid_lft 3600sec preferred_lft 3600sec
+prefix 2600:1700:cc60:a4c0::/64dev wlan0 onlink autoconf valid 3600 preferred 3600
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+q
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+31: wlan0    inet6 2600:1700:cc60:a4c0:9ab8:baff:fe08:3f81/64 scope global dynamic mngtmpaddr
+       valid_lft 3600sec preferred_lft 3600sec
+31: wlan0    inet6 2600:1700:cc60:a4c0:5d12:a9fc:ab5b:25a3/64 scope global temporary dynamic
+       valid_lft 3600sec preferred_lft 3600sec
+prefix 2600:1700:cc60:a4c0::/64dev wlan0 onlink autoconf valid 3600 preferred 3600
+31: wlan0    inet6 2600:1700:cc60:a4c0:9ab8:baff:fe08:3f81/64 scope global dynamic mngtmpaddr
+       valid_lft 3600sec preferred_lft 3600sec
+31: wlan0    inet6 2600:1700:cc60:a4c0:5d12:a9fc:ab5b:25a3/64 scope global temporary dynamic
+       valid_lft 3600sec preferred_lft 3600sec
+prefix 2600:1700:cc60:a4c0::/64dev wlan0 onlink autoconf valid 3600 preferred 3600
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 PROBE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+31: wlan0    inet6 2600:1700:cc60:a4c0:9ab8:baff:fe08:3f81/64 scope global dynamic mngtmpaddr
+       valid_lft 3600sec preferred_lft 3600sec
+31: wlan0    inet6 2600:1700:cc60:a4c0:5d12:a9fc:ab5b:25a3/64 scope global temporary dynamic
+       valid_lft 3600sec preferred_lft 3600sec
+prefix 2600:1700:cc60:a4c0::/64dev wlan0 onlink autoconf valid 3600 preferred 3600
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 PROBE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 PROBE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 PROBE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 PROBE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 PROBE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 PROBE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+31: wlan0    inet6 2600:1700:cc60:a4c0:9ab8:baff:fe08:3f81/64 scope global dynamic mngtmpaddr
+       valid_lft 3600sec preferred_lft 3600sec
+31: wlan0    inet6 2600:1700:cc60:a4c0:5d12:a9fc:ab5b:25a3/64 scope global temporary dynamic
+       valid_lft 3600sec preferred_lft 3600sec
+prefix 2600:1700:cc60:a4c0::/64dev wlan0 onlink autoconf valid 3600 preferred 3600
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 PROBE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+31: wlan0    inet6 2600:1700:cc60:a4c0:9ab8:baff:fe08:3f81/64 scope global dynamic mngtmpaddr
+       valid_lft 3600sec preferred_lft 3600sec
+31: wlan0    inet6 2600:1700:cc60:a4c0:5d12:a9fc:ab5b:25a3/64 scope global temporary dynamic
+       valid_lft 3600sec preferred_lft 3600sec
+prefix 2600:1700:cc60:a4c0::/64dev wlan0 onlink autoconf valid 3600 preferred 3600
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+31: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state DORMANT group default
+    link/ether 98:b8:ba:08:3f:81 brd ff:ff:ff:ff:ff:ff
+31: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP>
+    link/ether
+31: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default
+    link/ether 98:b8:ba:08:3f:81 brd ff:ff:ff:ff:ff:ff
+31: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP>
+    link/ether
+31: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP>
+    link/ether
+31: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP>
+    link/ether
+31: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state DORMANT group default
+    link/ether 98:b8:ba:08:3f:81 brd ff:ff:ff:ff:ff:ff
+31: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default
+    link/ether 98:b8:ba:08:3f:81 brd ff:ff:ff:ff:ff:ff
+31: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state DORMANT group default
+    link/ether 98:b8:ba:08:3f:81 brd ff:ff:ff:ff:ff:ff
+31: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP>
+    link/ether
+31: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default
+    link/ether 98:b8:ba:08:3f:81 brd ff:ff:ff:ff:ff:ff
+31: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP>
+    link/ether
+31: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP>
+    link/ether
+31: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP>
+    link/ether
+31: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state DORMANT group default
+    link/ether 98:b8:ba:08:3f:81 brd ff:ff:ff:ff:ff:ff
+31: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default
+    link/ether 98:b8:ba:08:3f:81 brd ff:ff:ff:ff:ff:ff
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 PROBE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+2600:1700:cc60:a4c0::1 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 PROBE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 REACHABLE
+192.168.1.254 dev wlan0 lladdr dc:7f:a4:f6:ef:99 STALE
+exit
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router PROBE
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router REACHABLE
+stop
+fe80::de7f:a4ff:fef6:ef99 dev wlan0 lladdr dc:7f:a4:f6:ef:99 router STALE
